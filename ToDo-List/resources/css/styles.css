@@ -1,0 +1,125 @@
+html, body {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #FAFAFA;
+}
+
+#content {
+	position: relative;
+	width: 50vw;
+	height: 70vh;
+	margin: 5vh auto;
+	border-radius: 0.5vh;
+	background: #FFF;
+}
+
+#content h1 {
+	margin: 0;
+	border-radius: 0.5vh 0.5vh 0 0;
+	padding: 2vh;
+	font-size: 2vh;
+	line-height: 2vh;
+	color: #FFFFFF;
+	background: #3f88c5;
+}
+
+#menu {
+	display: flex;
+	bottom: 2.5vh;
+	width: 45vw;
+	height: 5vh;
+	margin: 0 2.5vw;
+	position: absolute;
+	justify-content: flex-end;
+}
+
+
+.button {
+	width: 5vh;
+	height: 5vh;
+	margin: 0.5vh;
+	padding: 0;
+	border-radius: 50%;
+	font-size: 3vh;
+	line-height: 5vh;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.button:hover {
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.button.new-task {
+	background-color: #44bba4;
+}
+
+.button.clear-list {
+	background-color: #e94f37;
+}
+
+#tasks {
+	margin: 0;
+	padding: 0;
+	width: 50vw;
+}
+
+.task-list {
+	margin: 0;
+	padding: 0;
+	width: 50vw;
+	list-style-type: none;
+}
+
+.task {
+	display: flex;
+	height: 50px;
+	width: 50vw;
+	margin: 1vh 0;
+	align-items: center;
+	background-color: #ebf3f9;
+}
+
+.task.finished {
+	opacity: 0.5;
+}
+
+.task-status-checkbox {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	display: inline-block;
+	flex-grow: 0;
+	margin: 0 10px;
+	height: 20px;
+	width: 20px;
+	background-color: #FFFFFF;
+	border: 2px solid #393e41;
+}
+
+.task-status-checkbox:hover {
+	cursor: pointer;
+}
+
+.task-status-checkbox:checked {
+	background-color: #393e41;
+}
+
+.task-text-input {
+	display: inline-block;
+	margin: 0 5px;
+	flex-grow: 2;
+	height: 30px;
+	border-width: 0px;
+	border-color: #000;
+	background-color: transparent;
+	color: #000;
+	font-size: 20px;
+	line-height: 40px;
+
+}
+
+.task.edit .task-text-input {
+	border-width: 0px 0px 2px 0px;
+}

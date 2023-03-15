@@ -1,0 +1,27 @@
+{
+    "name": "mme-color-clicker",
+    "version": "1.0.0",
+    "description": "A simple JavaScript implementation of Peter Lauris Color Picker game",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "setup": "npm install",
+        "start": "node index.js",
+        "eslint": "eslint --format table app/resources/js"
+    },
+    "author": "Alexander Bazo <alexander.bazo@ur.de>",
+    "license": "MIT",
+    "dependencies": {
+        "eslint": "^8.0.1",
+        "express": "^4.17.1",
+        "open": "^8.3.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Multimedia-Engineering-Regensburg-Demos/MME-Color-Clicker.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Multimedia-Engineering-Regensburg-Demos/MME-Color-Clicker/issues"
+    },
+    "homepage": "https://github.com/Multimedia-Engineering-Regensburg-Demos/MME-Color-Clicker#readme"
+}

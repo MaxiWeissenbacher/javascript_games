@@ -1,0 +1,223 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    margin: 0;
+    padding: 5vh 5vw;
+	width: 90vw;
+    height: 90vh;
+    background: rgb(30,30,30);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(156, 0, 75);
+}
+
+#label {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    font-size: 2vh;
+    color: rgb(255,255,255);
+}
+
+@font-face {
+  font-family: 'ambi-player';
+  src: url('../icons/font/ambi-player.eot?74646678');
+  src: url('../icons/font/ambi-player.eot?74646678#iefix') format('embedded-opentype'),
+       url('../icons/font/ambi-player.woff2?74646678') format('woff2'),
+       url('../icons/font/ambi-player.woff?74646678') format('woff'),
+       url('../icons/font/ambi-player.ttf?74646678') format('truetype'),
+       url('../icons/font/ambi-player.svg?74646678#ambi-player') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'ambi-player';
+    src: url('../font/ambi-player.svg?74646678#ambi-player') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "ambi-player";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-play:before { content: '\e800'; } /* '' */
+.icon-pause:before { content: '\e801'; } /* '' */
+.icon-stop:before { content: '\e802'; } /* '' */
+.icon-upload:before { content: '\e803'; } /* '' */
+
+#player {
+    width: 720px;
+    height: 530px;
+    margin: 10vh auto;
+    border: solid 1px rgb(51, 51, 51);
+    border-radius: 2px;
+    padding: 0;
+}
+
+video {
+    display: block;
+    width: 720px;
+    height: 480px;
+    margin: 0;
+    padding: 0;
+    border-style: none;
+    background-color: rgb(30, 30, 30);
+}
+
+.controls {
+    width: 720px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    border-style: none;
+    background-color: rgb(51, 51, 51);
+}
+
+.controls .button {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 5px 0 0 10px;
+    padding: 0;
+    font-family: "ambi-player";
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 40px;
+    color: rgb(220, 220, 220);
+}
+
+.controls .button:hover {
+    cursor: pointer;
+    color: rgb(255, 129, 60);
+}
+
+.controls .button.play:before {
+    content: "\E801";
+}
+
+.controls .button.play.paused:before {
+    content: "\E800";
+}
+
+.controls .button.stop:before {
+    content: "\E802";
+}
+
+.controls .button.file:before {
+    content: "\E803";
+}
+
+.controls .upload {
+    display: none;
+}
+
+.controls .seekbar {
+    -webkit-appearance: none;
+    display: block;
+    float: left;
+    width: 500px;
+    height: 40px;
+    margin: 5px 0 0 10px;
+    background: transparent;
+}
+
+.controls .seekbar:focus {
+    outline: none;
+}
+
+.controls .seekbar::-moz-range-thumb {
+    border: solid 1px rgb(153, 153, 153);
+    border-radius: 0;
+    height: 30px;
+    width: 8px;
+    background: rgb(220, 220, 220);
+    cursor: pointer;
+}
+
+.controls .seekbar::-moz-range-track {
+    height: 8px;
+    cursor: pointer;
+    background: rgb(255, 129, 60);
+    border: none;
+}
+
+.controls .seekbar::-moz-focus-outer {
+    border: 0;
+}
+
+.controls .seekbar::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: rgb(255, 129, 60);
+    border: none;
+    border-radius: 3px;
+ }
+
+.controls .seekbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: rgb(220, 220, 220);
+    margin-top: -4px;
+ }
+
+.controls .label.time {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 5px 0 0 10px;
+    padding: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 40px;
+    color: rgb(255, 129, 60);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Aufgaben</title>
+    <link rel="stylesheet" type="text/css" href="vendors/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
+</head>
+
+<body>
+    <div id="content">
+        <h1>Meine Aufgaben</h1>
+        <div id="tasks">
+            <ul class="task-list">
+            </ul>
+        </div>
+        <div id="menu">
+            <div class="button clear-list"><i class="icon-remove"></i></div>
+            <div class="button new-task"><i class="icon-add"></i></div>
+        </div>
+    </div>
+    <template id="task-template">
+        <li class="task" data-id="">
+            <input type="checkbox" name="task-status" class="task-status-checkbox">
+            <input type="text" name="task-text" class="task-text-input">
+        </li>
+    </template>
+</body>
+<script type="module" src="resources/js/app.js"></script>
+
+</html>
