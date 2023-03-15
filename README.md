@@ -19,3 +19,4 @@ A user can create a to-do list. He can delete, add or move tasks.
 
 # App 5: Weather App:
 The user can type in a region or city and gets a weather report. This weather information are accessed via the "Open Weather Map API"
+![image](https://user-images.githubusercontent.com/46745783/225291810-26d09b50-0370-4b85-9350-f5021f58d803.png)
