@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "DidactGothic";
+    src: url("./fonts/Didact_Gothic/DidactGothic.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    background: #343779;
+    font-family: 'DidactGothic', serif;
+    color: #333;
+}
+
+content {
+    min-height: 100%;
+    padding: 25px;
+    margin-top: 90px;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.menu-screen .button {
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin: 450px auto;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #16183F;
+    background-color: #FFF;
+    line-height: 40px;
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.menu-screen .button:hover {
+    cursor: pointer;
+}
+
+.title {
+    width: 100%;
+    font-size: 3em;
+    text-align: center;
+    color: #FFF;
+}
+
+.clock {
+    position: relative;
+    width: 210px;
+    margin: 15px auto;
+}
+
+.clock .face {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #010104;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+
+.clock .center {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #010104;
+}
+
+.clock .hand {
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    top: 20px;
+    left: 103px;
+    transform-origin: 50% 85%;
+    background: #010104;
+    transform: rotateZ(0deg);
+}
+
+.clock .hand-animated {
+    animation: rotate 60s infinite linear;
+}
+
+.letters {
+    width: 792px;
+    height: 84px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.letters .letter {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #16183F;
+    background-color: #FFF;
+    line-height: 60px;
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.letters .letter.empty:after {
+    content: "?";
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.controls {
+    position: relative;
+    width: 792px;
+    height: 184px;
+    margin: 20px auto;
+    padding: 0;
+}
+
+.controls .button {
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #16183F;
+    background-color: #FFF;
+    line-height: 40px;
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.controls .button:hover {
+    cursor: pointer;
+}
+
+.controls .add-vowel {
+    top: 0;
+    left: 10px;
+}
+
+.controls .add-consonant {
+    top: 0;
+    right: 10px;
+}
+
+.controls .word-input {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 192px;
+    width: 400px;
+    height: 40px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #16183F;
+    background-color: #FFF;
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.controls .word-input:focus {
+    outline: none;
+}
+
+.results {
+    width: 792px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 44px;
+    color: #010204;
+}
+
+.results .points {
+    color: #FFF;
+    font-size: 64px;
+}
+
+.results .hint {
+    color: #FFF;
+    font-size: 32px;
+}

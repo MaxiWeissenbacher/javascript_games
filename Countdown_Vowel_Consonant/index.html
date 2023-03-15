@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="resources/css/default.css">
+</head>
+
+<body>
+    <content>
+        <div id="menu-screen" class="menu-screen">
+            <span class="button start-game">Start Game</span>
+        </div>
+        <div id="game-screen">
+            <div id="title" class="title">Countdown</div>
+            <div id="clock" class="clock">
+                <div id="face" class="face"></div>
+                <div id="center" class="center"></div>
+                <div id="hand" class="hand"></div>
+            </div>
+            <div id="letters" class="letters">
+                <span class="letter empty"></span>
+                <span class="letter empty"></span>
+                <span class="letter empty"></span>
+                <span class="letter empty"></span>
+                <span class="letter empty"></span>
+                <span class="letter empty"></span>
+                <span class="letter empty"></span>
+                <span class="letter empty"></span>
+                <span class="letter empty"></span>
+            </div>
+            <div class="clear-fix"></div>
+            <div id="controls" class="controls">
+                <span class="button add-vowel">Vowel</span>
+                <span class="button add-consonant">Consonant</span>
+                <input type="text" class="word-input" maxlength="9" />
+            </div>
+            <div id="results" class="results hidden">
+                <span class="points">0</span> Punkte<br />
+                <span class="hint">test</span>
+            </div>
+        </div>
+    </content>
+    <script type="module" src="resources/js/index.js"></script>
+</body>
+
+</html>

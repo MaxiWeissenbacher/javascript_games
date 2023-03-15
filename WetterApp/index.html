@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Wetter-App</title>
+    <!-- Import der verwendeten Schriftart -->
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;600&display=swap" rel="stylesheet">
+    <!-- Import der Fontawesome-CSS-Datei zur Anzeige der im UI verwendeteten Button-Icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+</head>
+
+<body>
+    <h1>Das Wetter</h1>
+    <span class="app-description">Gib den Namen einer Stadt ein, um ein <i>Widget</i> mit aktualisierbaren Wetterinformationen für diesen Standort zur Liste hinzuzufügen. Die Wetterdaten werden live über die öffentliche Schnittstelle der <a href="https://openweathermap.org">OpenWeatherMap</a> bezogen.</span>
+    <ul class="widgets">
+        <li class="widget add-item">
+            <!-- Eingabefeld für die Namen neuer Städte, deren Wetter als Widget angezeigt werden soll -->
+            <input type="text" placeholder="Neuer Ort" class="inputValue">
+        </li>
+        <!-- Fügen Sie hier die neuen (oder wiederhergestellten) Widgets ein -->
+    </ul>
+
+    <script type="module" src="resources/js/index.js"></script>
+</body>
+
+<!-- Template für ein neues Wetter-Widget-->
+<template id="weather-widget-template">
+    <!-- Das Attribut data-city kann verwendet werden um die im Widget angezeigte Stadt bei Bedarf auslesen zu können -->
+    <li class="widget" data-city="">
+        <!-- Im IMG-Element soll immer das passende Wetter-Icon zur aktuellen Wetterlage angezeigt werden (siehe API-Beschreibung im Handout) -->
+        <span class="icon" id="weatherIcon"><img src="http://openweathermap.org/img/wn/01d@2x.png"></span>
+        <span class="data">
+            <!-- Hier wird der Name der Stadt und die aktuelle Temperatur angezeigt -->
+            <span class="main"></span>
+        <span class="additional">
+        <span class="container min-temperature">
+            <span class="icon"><i class="fas fa-temperature-low"></i></span>
+            <!-- Im value-Element wird die Minimaltempertatur des aktuellen Tags angezeigt -->
+        <span class="value"></span>
+        </span>
+        <span class="container max-temperature">
+           <span class="icon"><i class="fas fa-temperature-high"></i></span>
+           <!-- Im value-Element wird die Maximaltempertatur des aktuellen Tags angezeigt -->
+        <span class="value"></span>
+        </span>
+        <span class="container humidity">
+            <span class="icon"><i class="fas fa-tint"></i></span>
+            <!-- Im value-Element wird die aktuelle Luftfeuchtigkeit angezeigt -->
+        <span class="value"></span>
+        </span>
+        <span class="container pressure">
+            <span class="icon"><i class="fas fa-compress-arrows-alt"></i></span>
+            <!-- Im value-Element wird der aktuelle Luftdruck angezeigt -->
+        <span class="value"></span>
+        </span>
+        <span class="container wind">
+            <span class="icon"><i class="fas fa-wind"></i></span>
+            <!-- Im value-Element wird die aktuelle Windgeschwindigkeit angezeigt -->
+        <span class="value"></span>
+        </span>
+        </span>
+        </span>
+        <span class="controls">
+            <!-- Ein Klick auf diesen Button soll die Daten im Widget aktualisieren -->
+            <span class="update"><i class="fas fa-sync-alt"></i></span>
+            <!-- Ein Klick auf diesen Button soll das Widget aus dem UI und die gespeicherte Stadt aus dem Browserspeicher entfernen -->
+            <span class="delete"><i class="fas fa-trash"></i></span>
+        </span>
+    </li>
+</template>
+
+</html>

@@ -1,0 +1,196 @@
+:root {
+    --liberty: #4357adff;
+    --verdigris: #48a9a6ff;
+    --timberwolf: #e4dfdaff;
+    --burlywood: #d4b483ff;
+    --fuzzy-wuzzy: #c1666bff;
+    --background: #ffffffff;
+    --foreground: #111111FF;
+}
+
+body {
+    font-family: "Spartan", sans-serif;
+    background-color: var(--liberty);
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* Animation from: https://codepen.io/biancadanforth/pen/BLYvqm */
+
+.show-error-animation {
+    background-color: var(--fuzzy-wuzzy);
+    animation: error-animation;
+    animation-duration: .5s;
+    animation-delay: 0.25s;
+}
+
+@keyframes error-animation {
+    0% {
+        transform: translateX(0px);
+        timing-function: ease-in;
+    }
+    37% {
+        transform: translateX(10px);
+        timing-function: ease-out;
+    }
+    55% {
+        transform: translateX(-10px);
+        timing-function: ease-in;
+    }
+    73% {
+        transform: translateX(8px);
+        timing-function: ease-out;
+    }
+    82% {
+        transform: translateX(-8px);
+        timing-function: ease-in;
+    }
+    91% {
+        transform: translateX(4px);
+        timing-function: ease-out;
+    }
+    96% {
+        transform: translateX(-4px);
+        timing-function: ease-in;
+    }
+    100% {
+        transform: translateX(0px);
+        timing-function: ease-in;
+    }
+}
+
+h1 {
+    width: 80vw;
+    margin: 3vh auto;
+    text-align: center;
+    font-weight: 600;
+    color: var(--timberwolf);
+}
+
+.app-description {
+    display: block;
+    width: 80vw;
+    margin: 1vh auto;
+    font-size: 1.15em;
+    line-height: 1.25em;
+    text-align: center;
+    color: var(--timberwolf);
+}
+
+.app-description a {
+    color: var(--burlywood);
+}
+
+.widgets {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 2vh auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+.widget {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    padding: 1vw;
+    margin-bottom: 1vw;
+    background-color: var(--background);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    color: var(--foreground);
+}
+
+.widget.add-item input {
+    width: 70vw;
+    outline: none;
+    border: none;
+    font-size: 1.75em;
+    line-height: 2em;
+    font-family: "Spartan", sans-serif;
+}
+
+.widget.add-item .add {
+    width: 10vw;
+    font-size: 1.75em;
+    line-height: 2em;
+    text-align: center;
+    color: var(--verdigris);
+    opacity: 0.5;
+}
+
+.widget.add-item .add:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.widget.add-item .add .widget .icon {
+    width: 15vw;
+}
+
+.widget .icon img {
+    display: block;
+    width: 10vw;
+    margin: 0 auto;
+}
+
+.widget .data {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.widget .data .main {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.widget .data .additional {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.widget .data .additional .container {
+    margin-right: 1em;
+}
+
+.widget .data .additional .container .icon {
+    color: var(--liberty);
+}
+
+.widget .controls {
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.widget .controls {
+    opacity: 1;
+}
+
+.widget .controls span {
+    width: 10vw;
+    font-size: 2em;
+    line-height: 2em;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.widget .controls span.update {
+    color: var(--verdigris);
+}
+
+.widget .controls span.delete {
+    color: var(--fuzzy-wuzzy);
+}
+
+.widget .controls span:hover {
+    cursor: pointer;
+    opacity: 1;
+}

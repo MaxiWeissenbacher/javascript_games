@@ -1,0 +1,23 @@
+{
+    "name": "mme-ss2021-task-3-countdown-starter",
+    "version": "1.0.0",
+    "description": "A browser based implementation of a Weather Display App",
+    "main": "index.js",
+    "scripts": {
+        "eslint": "eslint --format table resources/js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Multimedia-Engineering-Regensburg-Tasks/SS21-U03-Countdown-Starter.git"
+    },
+    "author": "Alexander Bazo <alexander.bazo@ur.de>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Multimedia-Engineering-Regensburg-Tasks/SS21-U02-Countdown-Starter/issues"
+    },
+    "homepage": "https://github.com/Multimedia-Engineering-Regensburg-Tasks/SS21-U02-Countdown-Starter#readme",
+    "dependencies": {
+        "eslint": "^7.26.0",
+        "@fortawesome/fontawesome-free": "^5.15.3"
+    }
+}
