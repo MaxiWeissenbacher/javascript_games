@@ -1,0 +1,68 @@
+:root {
+    --Background: #282a36;
+    --CurrentLine: #44475a;
+    --Foreground: #f8f8f2;
+    --Comment: #6272a4;
+    --Cyan: #8be9fd;
+    --Green: #50fa7b;
+    --Orange: #ffb86c;
+    --Pink: #ff79c6;
+    --Purple: #bd93f9;
+    --Red: #ff5555;
+    --Yellow: #f1fa8c;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Background);
+    color: var(--Foreground);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h1 {
+    color: var(--Orange);
+    text-align: center;
+}
+
+p.subtitle {
+    text-align: center;
+    font-size: 1.25em;
+}
+
+p.score {
+    width: 30vw;
+    text-align: right;
+    color: var(--Orange);
+    font-weight: 500;
+    font-size: 2em;
+}
+
+p.score:after {
+    content: " Punkte";
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 30vw;
+    padding: 0;
+    border-radius: 2px;
+    background-color: var(--Foreground);    
+}
+
+.target {
+    width: 5vw;
+    height: 5vw;
+    margin: 1vw;
+    padding: 0;
+    border: 2px;
+    background-color: var(--Red);
+}
+
+.target:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
